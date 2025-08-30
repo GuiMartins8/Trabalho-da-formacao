@@ -6,3 +6,9 @@ Tese de defesa
 
 MVP
 minimo viavel produto
+
+1 - Fazer o desing de uma pagina de usuario e uma pagina de login
+2 - Fazer desing da pagina de Pais/educadores(texto explicando que pais/educadores podem denunciar ou dar ideias de novas histórias form de denuncia/ideias e sessão de comentarios sobre as histórias assistidas)
+3 - Fazer a pagina do Sobre(explicação simples sobre o projeto e quem somos)
+4 - fazer pagina que mostra todas as histórias disponiveis no momento
+5 - fazer as histórias
