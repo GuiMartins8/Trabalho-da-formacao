@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórias Interativas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FDFEFE] text-gray-800 font-nunito">
+  
+  <!-- Header -->
+  <header class="bg-[#5DADE2] p-4 flex justify-between items-center shadow-lg">
+    <h1 class="text-white text-2xl font-bold">Histórias Interativas</h1>
+    <nav>
+      <ul class="flex gap-6 text-white">
+        <li><a href="#" class="hover:underline">Início</a></li>
+        <li><a href="#" class="hover:underline">Histórias</a></li>
+        <li><a href="#" class="hover:underline">Jogos</a></li>
+        <li><a href="#" class="hover:underline">Pais/Educadores</a></li>
+        <li><a href="#" class="hover:underline">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="text-center py-16 bg-[#F39C12] text-white">
+    <h2 class="text-4xl font-bold mb-4">Aprenda lógica brincando!</h2>
+    <p class="text-lg mb-6">Escolha sua aventura e descubra como suas decisões mudam a história.</p>
+    <a href="#historias" class="bg-white text-[#F39C12] px-6 py-3 rounded-full font-bold shadow-lg hover:bg-[#FDFEFE]">Começar uma Aventura</a>
+  </section>
+
+  <!-- Histórias em Destaque -->
+  <section id="historias" class="p-10">
+    <h3 class="text-3xl font-bold mb-6 text-center">Histórias em Destaque</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <img src="https://placehold.co/300x200" alt="História 1" class="rounded-xl mb-4">
+        <h4 class="text-xl font-bold">Aventura no Castelo</h4>
+        <p class="text-gray-600">Ajude a princesa a resolver enigmas para escapar da torre.</p>
+      </div>
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <img src="https://placehold.co/300x200" alt="História 2" class="rounded-xl mb-4">
+        <h4 class="text-xl font-bold">O Mistério da Floresta</h4>
+        <p class="text-gray-600">Faça escolhas para ajudar o explorador a encontrar o caminho.</p>
+      </div>
+      <!-- Card -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
+        <img src="https://placehold.co/300x200" alt="História 3" class="rounded-xl mb-4">
+        <h4 class="text-xl font-bold">A Jornada Espacial</h4>
+        <p class="text-gray-600">Resolva desafios lógicos e salve a nave perdida no espaço.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#5DADE2] text-white text-center p-4 mt-10">
+    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
