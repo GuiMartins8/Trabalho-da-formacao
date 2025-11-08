@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Histórias Interativas</title>
+
+  <!-- Tailwind CDN + Font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    /* efeito sutil de glass para o card */
+    .glass {
+      background: rgba(30,41,59,0.55);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(96,165,250,0.12);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Header (mesmo estilo) -->
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-[#60A5FA]/20 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-[#60A5FA] tracking-wide">Histórias Interativas</h1>
+      <nav>
+        <ul class="flex gap-6 text-gray-200 text-sm md:text-base">
+          <li><a href="historias.html" class="hover:text-[#38BDF8] transition">Histórias</a></li>
+          <li><a href="Laboratorio_ideias.html" class="hover:text-[#38BDF8] transition">Laboratório</a></li>
+          <li><a href="sobre_nos.html" class="hover:text-[#38BDF8] transition">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="flex-grow flex items-center justify-center py-24 px-6 mt-20">
+    <div class="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+      <!-- Lado esquerdo: banner / venda rápida -->
+      <section class="hidden md:flex flex-col gap-6 justify-center items-start p-8 rounded-3xl shadow-2xl glass">
+        <h2 class="text-4xl font-extrabold text-[#E0F2FE]">Bem-vindo de volta!</h2>
+        <p class="text-gray-200 max-w-md">
+          Faça login para continuar suas aventuras, salvar progresso e acessar conteúdos exclusivos do projeto comunitário.
+        </p>
+        <ul class="text-gray-300 space-y-2">
+          <li class="flex items-center gap-3">
+            <span class="inline-block w-3 h-3 bg-[#60A5FA] rounded-full"></span>
+            Salvamento de progresso
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="inline-block w-3 h-3 bg-[#60A5FA] rounded-full"></span>
+            Recomendações personalizadas
+          </li>
+          <li class="flex items-center gap-3">
+            <span class="inline-block w-3 h-3 bg-[#60A5FA] rounded-full"></span>
+            Acesso a novos módulos
+          </li>
+        </ul>
+        <div class="mt-6">
+          <a href="sobre_nos.html" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 transition">Saiba mais</a>
+        </div>
+      </section>
+
+      <!-- Lado direito: card de login -->
+      <section class="p-8 rounded-3xl shadow-2xl glass">
+        <h3 class="text-2xl font-extrabold mb-2 text-[#93C5FD]">Entrar na sua conta</h3>
+        <p class="text-gray-300 mb-6">Use suas credenciais para acessar seu perfil.</p>
+
+        <!-- Form -->
+        <form id="loginForm" class="space-y-4" novalidate>
+          <!-- Email -->
+          <div>
+            <label for="email" class="block text-sm text-gray-200 mb-2">E-mail</label>
+            <input id="email" name="email" type="email" required
+                   class="w-full px-4 py-3 rounded-xl bg-[#0f172a]/60 border border-[#60A5FA]/10 focus:outline-none focus:ring-2 focus:ring-[#60A5FA]/40"
+                   placeholder="seu@exemplo.com" aria-describedby="emailHelp" />
+            <p id="emailHelp" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Senha -->
+          <div>
+            <label for="password" class="block text-sm text-gray-200 mb-2">Senha</label>
+            <div class="relative">
+              <input id="password" name="password" type="password" minlength="6" required
+                     class="w-full px-4 py-3 rounded-xl bg-[#0f172a]/60 border border-[#60A5FA]/10 focus:outline-none focus:ring-2 focus:ring-[#60A5FA]/40 pr-12"
+                     placeholder="••••••••" aria-describedby="passwordHelp" />
+              <button type="button" id="togglePassword" aria-label="Mostrar senha"
+                      class="absolute right-2 top-2/4 -translate-y-2/4 px-3 py-1 rounded-lg text-sm bg-black/25 hover:bg-black/30 transition">
+                Mostrar
+              </button>
+            </div>
+            <p id="passwordHelp" class="mt-1 text-sm text-red-400 hidden"></p>
+          </div>
+
+          <!-- Lembre-me e esqueci senha -->
+          <div class="flex items-center justify-between">
+            <label class="inline-flex items-center gap-2 text-gray-200">
+              <input id="remember" type="checkbox" class="w-4 h-4 rounded text-[#60A5FA] bg-black/20 border-[#60A5FA]/20" />
+              <span class="text-sm">Lembre-me</span>
+            </label>
+            <a href="#" class="text-sm text-[#93C5FD] hover:underline">Esqueci a senha</a>
+          </div>
+
+          <!-- Botões -->
+          <div class="pt-4">
+            <button type="submit"
+                    class="w-full bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-3 rounded-full font-bold hover:scale-105 transition shadow-lg">
+              Entrar
+            </button>
+          </div>
+
+          <!-- ou login social (visual apenas) -->
+          <div class="mt-4 text-center">
+            <p class="text-sm text-gray-300 mb-3">ou entrar com</p>
+            <div class="flex gap-3 justify-center">
+              <button type="button" class="px-4 py-2 rounded-xl border border-[#60A5FA]/15 text-sm hover:scale-105 transition">Google</button>
+              <button type="button" class="px-4 py-2 rounded-xl border border-[#60A5FA]/15 text-sm hover:scale-105 transition">GitHub</button>
+            </div>
+          </div>
+
+          <!-- mensagem de erro/sucesso -->
+          <p id="formMessage" class="mt-3 text-sm hidden"></p>
+        </form>
+
+        <!-- link para registrar -->
+        <p class="text-center text-gray-300 mt-6">
+          Não tem conta?
+          <a href="#" class="text-[#93C5FD] font-semibold hover:underline">Registrar-se</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0F172A] text-center py-6 border-t border-[#60A5FA]/20 mt-auto">
+    <p class="text-gray-400 text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- JS: validação + toggle + remember me (salva email no localStorage) -->
+  <script>
+    (function () {
+      const form = document.getElementById('loginForm');
+      const emailInput = document.getElementById('email');
+      const passwordInput = document.getElementById('password');
+      const toggleBtn = document.getElementById('togglePassword');
+      const rememberCheckbox = document.getElementById('remember');
+      const emailHelp = document.getElementById('emailHelp');
+      const passwordHelp = document.getElementById('passwordHelp');
+      const formMessage = document.getElementById('formMessage');
+
+      // Carregar email salvo (se existir)
+      try {
+        const saved = localStorage.getItem('hi_saved_email');
+        if (saved) {
+          emailInput.value = saved;
+          rememberCheckbox.checked = true;
+        }
+      } catch (e) { /* localStorage pode estar desabilitado */ }
+
+      // Toggle mostrar/ocultar senha
+      toggleBtn.addEventListener('click', () => {
+        const isPwd = passwordInput.type === 'password';
+        passwordInput.type = isPwd ? 'text' : 'password';
+        toggleBtn.textContent = isPwd ? 'Ocultar' : 'Mostrar';
+      });
+
+      // Função simples de validação
+      function validate() {
+        let ok = true;
+        // reset messages
+        emailHelp.textContent = '';
+        passwordHelp.textContent = '';
+        emailHelp.classList.add('hidden');
+        passwordHelp.classList.add('hidden');
+        formMessage.classList.add('hidden');
+
+        // email
+        const emailVal = emailInput.value.trim();
+        if (!emailVal) {
+          emailHelp.textContent = 'E-mail é obrigatório.';
+          emailHelp.classList.remove('hidden');
+          ok = false;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+          emailHelp.textContent = 'Formato de e-mail inválido.';
+          emailHelp.classList.remove('hidden');
+          ok = false;
+        }
+
+        // senha
+        const pwdVal = passwordInput.value;
+        if (!pwdVal) {
+          passwordHelp.textContent = 'Senha é obrigatória.';
+          passwordHelp.classList.remove('hidden');
+          ok = false;
+        } else if (pwdVal.length < 6) {
+          passwordHelp.textContent = 'A senha precisa ter ao menos 6 caracteres.';
+          passwordHelp.classList.remove('hidden');
+          ok = false;
+        }
+
+        return ok;
+      }
+
+      // Mock de autenticação (substituir por chamada real ao backend)
+      function mockAuth(email, password) {
+        // lógica simples: qualquer combinação que contenha "user" passa; senão falha
+        // substitua por fetch(...) para seu servidor real
+        return new Promise((resolve, reject) => {
+          setTimeout(() => {
+            if (email.toLowerCase().includes('user') || email.toLowerCase().includes('teste')) {
+              resolve({ ok: true, name: 'Usuário' });
+            } else {
+              reject(new Error('Credenciais inválidas.'));
+            }
+          }, 700);
+        });
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (!validate()) return;
+
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+
+        // mostrar estado de envio
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Entrando...';
+
+        try {
+          const res = await mockAuth(email, password);
+          // salvar email se lembre-me marcado
+          try {
+            if (rememberCheckbox.checked) {
+              localStorage.setItem('hi_saved_email', email);
+            } else {
+              localStorage.removeItem('hi_saved_email');
+            }
+          } catch (e) { /* ignore */ }
+
+          // sucesso
+          formMessage.textContent = `Bem-vindo(a), ${res.name}! Redirecionando...`;
+          formMessage.className = 'mt-3 text-sm text-green-300';
+          formMessage.classList.remove('hidden');
+
+          // simular redirecionamento para página inicial do app
+          setTimeout(() => {
+            // aqui você faria: window.location.href = 'dashboard.html';
+            formMessage.textContent = 'Redirecionamento simulado. (Substitua por window.location)';
+
+            // reabilita botão
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+          }, 900);
+
+        } catch (err) {
+          formMessage.textContent = err.message || 'Erro ao entrar.';
+          formMessage.className = 'mt-3 text-sm text-red-400';
+          formMessage.classList.remove('hidden');
+
+          // reabilita botão
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalText;
+        }
+      });
+
+      // acessibilidade: Enter no campo senha dispara submit
+      passwordInput.addEventListener('keyup', (ev) => {
+        if (ev.key === 'Enter') form.dispatchEvent(new Event('submit', { cancelable: true }));
+      });
+    })();
+  </script>
+
+</body>
+</html>
