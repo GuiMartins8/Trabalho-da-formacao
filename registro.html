@@ -145,6 +145,14 @@
             passwordHelp.textContent = 'A senha deve conter pelo menos uma letra maiúscula.';
             passwordHelp.classList.remove('hidden');
             ok = false;
+        } else if (!/[a-z]/.test(pwdVal)) {
+            passwordHelp.textContent = 'A senha deve conter pelo menos uma letra minúscula.';
+            passwordHelp.classList.remove('hidden');
+            ok = false;
+        } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(pwdVal)) {
+        passwordHelp.textContent = 'A senha deve conter pelo menos um caractere especial.';
+        passwordHelp.classList.remove('hidden');
+        ok = false;
         } else if (!/\d/.test(pwdVal)) {
             passwordHelp.textContent = 'A senha deve conter pelo menos um número.';
             passwordHelp.classList.remove('hidden');
