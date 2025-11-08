@@ -122,22 +122,37 @@
           emailHelp.textContent = 'O e-mail é obrigatório.';
           emailHelp.classList.remove('hidden');
           ok = false;
-        } else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(emailVal)) {
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailVal)) {
+
           emailHelp.textContent = 'Formato de e-mail inválido.';
           emailHelp.classList.remove('hidden');
           ok = false;
-        }
+        } else {
+                 emailHelp.classList.add('hidden');
+                }
 
         const pwdVal = passwordInput.value;
+
         if (!pwdVal) {
-          passwordHelp.textContent = 'A senha é obrigatória.';
-          passwordHelp.classList.remove('hidden');
-          ok = false;
+            passwordHelp.textContent = 'A senha é obrigatória.';
+            passwordHelp.classList.remove('hidden');
+            ok = false;
         } else if (pwdVal.length < 6) {
-          passwordHelp.textContent = 'A senha deve ter no mínimo 6 caracteres.';
-          passwordHelp.classList.remove('hidden');
-          ok = false;
-        }
+            passwordHelp.textContent = 'A senha deve ter no mínimo 6 caracteres.';
+            passwordHelp.classList.remove('hidden');
+            ok = false;
+        } else if (!/[A-Z]/.test(pwdVal)) {
+            passwordHelp.textContent = 'A senha deve conter pelo menos uma letra maiúscula.';
+            passwordHelp.classList.remove('hidden');
+            ok = false;
+        } else if (!/\d/.test(pwdVal)) {
+            passwordHelp.textContent = 'A senha deve conter pelo menos um número.';
+            passwordHelp.classList.remove('hidden');
+            ok = false;
+        } else {
+            passwordHelp.classList.add('hidden');
+}
+
 
         return ok;
       }
