@@ -5,55 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Histórias Interativas</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
-<body class="bg-[#FDFEFE] text-gray-800 font-nunito">
+
+<body class="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 min-h-screen">
 
   <!-- Header -->
-  <header class="bg-[#5DADE2] p-4 flex justify-between items-center shadow-lg">
-    <h1 class="text-white text-2xl font-bold">Histórias Interativas</h1>
-    <nav>
-      <ul class="flex gap-6 text-white">
-        <li><a href="index.html" class="hover:underline">Início</a></li>
-        <li><a href="Laboratorio_ideias.html" class="hover:underline">Laboratório de Ideias</a></li>
-        <li><a href="sobre_nos.html" class="hover:underline">Sobre</a></li>
-      </ul>
-    </nav>
+  <header class="bg-[#1E40AF]/60 backdrop-blur-md border-b border-[#3B82F6]/30 p-5 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-[#60A5FA] tracking-wide">Histórias Interativas</h1>
+      <nav>
+        <ul class="flex gap-6 text-[#E0E7FF]">
+          <li><a href="index.html" class="hover:text-[#38BDF8] transition">Início</a></li>
+          <li><a href="Laboratorio_ideias.html" class="hover:text-[#38BDF8] transition">Laboratório</a></li>
+          <li><a href="sobre_nos.html" class="hover:text-[#38BDF8] transition">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- Banner -->
-  <section class="text-center py-16 bg-[#F39C12] text-white">
-    <h2 class="text-4xl font-bold mb-4">Explore Nossas Histórias</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto">Escolha sua aventura e resolva desafios lógicos enquanto se diverte!</p>
+  <section class="text-center py-24 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] text-white shadow-xl">
+    <h2 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Entre em um Novo Mundo</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">Escolha seu destino, resolva desafios e viva aventuras únicas.</p>
+    <a href="#historias" class="bg-white text-[#3B82F6] font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:bg-[#E0E7FF] transition">Explorar Histórias ↓</a>
   </section>
 
-  <!-- Histórias em Destaque -->
-  <section id="historias-destaque" class="p-10 max-w-6xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-center text-[#5DADE2]">Histórias em Destaque</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <img src="fotos/castelo.webp" alt="Aventura no Castelo" class="rounded-xl mb-4">
-        <h4 class="text-xl font-bold">Aventura no Castelo</h4>
-        <p class="text-gray-600">Ajude a princesa a resolver enigmas para escapar da torre.</p>
-        <a href="#" class="mt-4 inline-block bg-[#F39C12] text-white px-4 py-2 rounded-full hover:bg-[#D68910]">Jogar</a>
+  <!-- Histórias -->
+  <section id="historias" class="py-20 px-6 max-w-6xl mx-auto">
+    <h3 class="text-4xl font-extrabold text-center mb-12 text-[#60A5FA]">Histórias em Destaque</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <div class="bg-[#1E293B] p-6 rounded-2xl shadow-2xl border border-[#3B82F6]/20 hover:border-[#60A5FA] hover:shadow-[#60A5FA]/40 transition duration-300">
+        <img src="fotos/castelo.webp" alt="Aventura no Castelo" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-[#93C5FD] mb-2">Aventura no Castelo</h4>
+        <p class="text-gray-300 mb-4">Ajude a princesa a escapar da torre resolvendo enigmas misteriosos.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <img src="fotos/floresta.jpg" alt="O Mistério da Floresta" class="rounded-xl mb-4">
-        <h4 class="text-xl font-bold">O Mistério da Floresta</h4>
-        <p class="text-gray-600">Faça escolhas para ajudar o explorador a encontrar o caminho.</p>
-        <a href="#" class="mt-4 inline-block bg-[#F39C12] text-white px-4 py-2 rounded-full hover:bg-[#D68910]">Jogar</a>
+
+      <div class="bg-[#1E293B] p-6 rounded-2xl shadow-2xl border border-[#3B82F6]/20 hover:border-[#60A5FA] hover:shadow-[#60A5FA]/40 transition duration-300">
+        <img src="fotos/floresta.jpg" alt="O Mistério da Floresta" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-[#93C5FD] mb-2">O Mistério da Floresta</h4>
+        <p class="text-gray-300 mb-4">Acompanhe o explorador em sua jornada por um bosque cheio de segredos.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:scale-105 transition">
-        <img src="fotos/espaço.jpg" alt="A Jornada Espacial" class="rounded-xl mb-4">
-        <h4 class="text-xl font-bold">A Jornada Espacial</h4>
-        <p class="text-gray-600">Resolva desafios lógicos e salve a nave perdida no espaço.</p>
-        <a href="#" class="mt-4 inline-block bg-[#F39C12] text-white px-4 py-2 rounded-full hover:bg-[#D68910]">Jogar</a>
+
+      <div class="bg-[#1E293B] p-6 rounded-2xl shadow-2xl border border-[#3B82F6]/20 hover:border-[#60A5FA] hover:shadow-[#60A5FA]/40 transition duration-300">
+        <img src="fotos/espaço.jpg" alt="A Jornada Espacial" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-semibold text-[#93C5FD] mb-2">A Jornada Espacial</h4>
+        <p class="text-gray-300 mb-4">Embarque em uma missão intergaláctica e salve a nave perdida no cosmos.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
       </div>
+
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#5DADE2] text-white text-center p-4 mt-10">
-    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer class="bg-[#0F172A] text-center py-6 border-t border-[#3B82F6]/20">
+    <p class="text-gray-400 text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
 </body>

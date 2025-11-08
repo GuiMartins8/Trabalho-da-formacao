@@ -7,83 +7,85 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-[#FDFEFE] text-gray-800 font-nunito">
+<body class="bg-gradient-to-b from-indigo-50 via-purple-50 to-white text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="bg-[#5DADE2] p-4 flex justify-between items-center shadow-lg">
-    <h1 class="text-white text-2xl font-bold">Histórias Interativas</h1>
+  <header class="bg-gradient-to-r from-indigo-500 to-purple-600 p-5 flex justify-between items-center shadow-lg backdrop-blur-md">
+    <h1 class="text-white text-3xl font-extrabold tracking-wide">Laboratório de Ideias 💡</h1>
     <nav>
-      <ul class="flex gap-6 text-white">
-        <li><a href="index.html" class="hover:underline">Início</a></li>
-        <li><a href="historias.html" class="hover:underline">Histórias</a></li>
-        <li><a href="sobre.html" class="hover:underline">Sobre</a></li>
+      <ul class="flex gap-6 text-white font-medium">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Início</a></li>
+        <li><a href="historias.html" class="hover:text-yellow-300 transition">Histórias</a></li>
+        <li><a href="sobre.html" class="hover:text-yellow-300 transition">Sobre</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Banner -->
-  <section class="text-center py-16 bg-[#F39C12] text-white">
-    <h2 class="text-4xl font-bold mb-4">Laboratório de Ideias</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto">
-      Este é o espaço onde os cooperados ajudam a escolher o próximo jogo educativo!
-      Participe votando no tema que mais te interessa ou envie sua própria sugestão.
+  <section class="text-center py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white shadow-lg">
+    <h2 class="text-5xl font-extrabold mb-6 drop-shadow-md">Inove com sua Criatividade</h2>
+    <p class="text-lg max-w-2xl mx-auto mb-8 opacity-90">
+      Ajude a decidir qual será o próximo jogo educativo! Vote, envie ideias e veja o que está em alta.
     </p>
+    <a href="#votacao" class="bg-white text-purple-700 px-8 py-3 rounded-full font-bold shadow-md hover:scale-105 transition">Participar Agora</a>
   </section>
 
   <!-- Votação -->
-  <section class="p-10 max-w-5xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-center text-[#5DADE2]">Vote no Próximo Tema</h3>
+  <section id="votacao" class="py-16 px-6 max-w-6xl mx-auto">
+    <h3 class="text-4xl font-bold mb-10 text-center text-indigo-700">Vote no Próximo Tema</h3>
 
-    <div id="cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-xl font-bold mb-2">Aventura Matemática</h4>
-        <p class="text-gray-600 mb-4">Desafios e enigmas numéricos para resolver em equipe!</p>
-        <button onclick="votar('Aventura Matemática')" class="bg-[#5DADE2] text-white px-4 py-2 rounded-full hover:bg-[#3498DB]">Votar</button>
+    <div id="cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <h4 class="text-2xl font-bold text-indigo-700 mb-3">Aventura Matemática</h4>
+        <p class="text-gray-600 mb-5">Resolva desafios e enigmas numéricos para vencer em equipe!</p>
+        <button onclick="votar('Aventura Matemática')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-xl font-bold mb-2">O Enigma das Cores</h4>
-        <p class="text-gray-600 mb-4">Aprenda lógica e padrões com um mundo colorido e misterioso.</p>
-        <button onclick="votar('O Enigma das Cores')" class="bg-[#5DADE2] text-white px-4 py-2 rounded-full hover:bg-[#3498DB]">Votar</button>
+
+      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <h4 class="text-2xl font-bold text-indigo-700 mb-3">O Enigma das Cores</h4>
+        <p class="text-gray-600 mb-5">Descubra padrões e lógica num mundo repleto de mistério e cores!</p>
+        <button onclick="votar('O Enigma das Cores')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
       </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-xl font-bold mb-2">Missão do Sistema Solar</h4>
-        <p class="text-gray-600 mb-4">Raciocínio espacial e matemática básica para salvar o universo!</p>
-        <button onclick="votar('Missão do Sistema Solar')" class="bg-[#5DADE2] text-white px-4 py-2 rounded-full hover:bg-[#3498DB]">Votar</button>
+
+      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <h4 class="text-2xl font-bold text-indigo-700 mb-3">Missão do Sistema Solar</h4>
+        <p class="text-gray-600 mb-5">Explore o cosmos e use a lógica para salvar o universo!</p>
+        <button onclick="votar('Missão do Sistema Solar')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
       </div>
     </div>
 
-    <p id="mensagem-voto" class="text-center mt-6 text-[#27AE60] font-semibold"></p>
+    <p id="mensagem-voto" class="text-center mt-8 text-green-600 font-semibold"></p>
   </section>
 
-  <!-- Envio de Sugestões -->
-  <section class="bg-[#EAF2F8] py-12">
-    <div class="max-w-4xl mx-auto text-center">
-      <h3 class="text-3xl font-bold mb-6 text-[#5DADE2]">Envie Sua Ideia</h3>
-      <p class="text-gray-700 mb-8">Tem uma sugestão de jogo ou tema? Conte pra gente!</p>
+  <!-- Envio de Ideias -->
+  <section class="bg-gradient-to-r from-indigo-100 via-purple-100 to-white py-16">
+    <div class="max-w-3xl mx-auto text-center">
+      <h3 class="text-4xl font-bold mb-6 text-indigo-700">Envie Sua Ideia</h3>
+      <p class="text-gray-700 mb-8">Tem uma sugestão brilhante? Compartilhe com a comunidade!</p>
 
-      <form id="form-ideia" class="bg-white p-8 rounded-2xl shadow-lg max-w-xl mx-auto">
-        <input id="nome" type="text" placeholder="Seu nome" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#5DADE2]" required>
-        <input id="titulo" type="text" placeholder="Título da ideia" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#5DADE2]" required>
-        <textarea id="descricao" placeholder="Descreva sua ideia..." class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-[#5DADE2]" rows="5" required></textarea>
-        <button type="submit" class="bg-[#F39C12] text-white px-6 py-3 rounded-full font-bold hover:bg-[#D68910] transition">Enviar Ideia</button>
+      <form id="form-ideia" class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-lg">
+        <input id="nome" type="text" placeholder="Seu nome" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        <input id="titulo" type="text" placeholder="Título da ideia" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+        <textarea id="descricao" placeholder="Descreva sua ideia..." class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="5" required></textarea>
+        <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition">Enviar Ideia</button>
       </form>
-      <p id="mensagem-envio" class="text-center mt-4 text-[#27AE60] font-semibold"></p>
+      <p id="mensagem-envio" class="text-center mt-4 text-green-600 font-semibold"></p>
     </div>
   </section>
 
   <!-- Dashboard -->
-  <section class="p-10 max-w-5xl mx-auto">
-    <h3 class="text-3xl font-bold mb-4 text-center text-[#5DADE2]">Tendências Educacionais</h3>
-    <p class="text-center text-gray-600 mb-8">Acompanhe os temas mais votados pelos cooperados!</p>
+  <section class="p-10 max-w-6xl mx-auto">
+    <h3 class="text-4xl font-bold mb-4 text-center text-indigo-700">Tendências Educacionais</h3>
+    <p class="text-center text-gray-600 mb-8">Veja quais temas estão empolgando nossos criadores!</p>
 
-    <div class="bg-white p-6 rounded-2xl shadow-lg">
+    <div class="bg-white/90 p-8 rounded-3xl shadow-lg backdrop-blur-md">
       <canvas id="graficoVotos" height="100"></canvas>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#5DADE2] text-white text-center p-4 mt-10">
-    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center p-6 mt-16 shadow-lg">
+    <p class="text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
   <script>
@@ -101,7 +103,7 @@
         datasets: [{
           label: 'Votos',
           data: Object.values(votos),
-          backgroundColor: ['#5DADE2', '#F39C12', '#58D68D']
+          backgroundColor: ['#6366F1', '#8B5CF6', '#60A5FA']
         }]
       },
       options: {
@@ -115,14 +117,13 @@
       votos[tema]++;
       grafico.data.datasets[0].data = Object.values(votos);
       grafico.update();
-      document.getElementById('mensagem-voto').textContent = `Voto registrado em "${tema}"!`;
+      document.getElementById('mensagem-voto').textContent = `✅ Voto registrado em "${tema}"!`;
     }
 
     document.getElementById('form-ideia').addEventListener('submit', (e) => {
       e.preventDefault();
       const nome = document.getElementById('nome').value;
       const titulo = document.getElementById('titulo').value;
-      const descricao = document.getElementById('descricao').value;
       document.getElementById('mensagem-envio').textContent = `Obrigado, ${nome}! Sua ideia "${titulo}" foi enviada com sucesso.`;
       e.target.reset();
     });

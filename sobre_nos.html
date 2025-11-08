@@ -3,45 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre - Histórias Interativas</title>
+  <title>Sobre Nós - Histórias Interativas</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-[#FDFEFE] text-gray-800 font-nunito">
+<body class="bg-gradient-to-b from-indigo-50 via-purple-50 to-white text-gray-800 font-sans">
 
   <!-- Header -->
-  <header class="bg-[#5DADE2] p-4 flex justify-between items-center shadow-lg">
-    <h1 class="text-white text-2xl font-bold">Histórias Interativas</h1>
+  <header class="bg-gradient-to-r from-indigo-500 to-purple-600 p-5 flex justify-between items-center shadow-lg backdrop-blur-md">
+    <h1 class="text-white text-3xl font-extrabold tracking-wide">Histórias Interativas ✨</h1>
     <nav>
-      <ul class="flex gap-6 text-white">
-        <li><a href="index.html" class="hover:underline">Início</a></li>
-        <li><a href="historias.html" class="hover:underline">Histórias</a></li>
-        <li><a href="Laboratorio_ideias.html" class="hover:underline">Laboratório de Ideias</a></li>
+      <ul class="flex gap-6 text-white font-medium">
+        <li><a href="index.html" class="hover:text-yellow-300 transition">Início</a></li>
+        <li><a href="historias.html" class="hover:text-yellow-300 transition">Histórias</a></li>
+        <li><a href="Laboratorio_ideias.html" class="hover:text-yellow-300 transition">Laboratório</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Banner -->
-  <section class="text-center py-16 bg-[#F39C12] text-white">
-    <h2 class="text-4xl font-bold mb-4">Sobre Nós</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto">Somos um grupo de 3 pessoas dedicadas a criar ferramentas educativas interativas para crianças e pré-adolescentes, totalmente voltadas para a comunidade, sem interesse em ganho financeiro.</p>
+  <section class="text-center py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white shadow-lg">
+    <h2 class="text-5xl font-extrabold mb-6 drop-shadow-md">Sobre Nós</h2>
+    <p class="text-lg max-w-3xl mx-auto mb-6 opacity-90">
+      Somos um grupo apaixonado por tecnologia e educação, dedicados a criar experiências de aprendizado divertidas, interativas e acessíveis para todos.
+    </p>
   </section>
 
-  <!-- Informações do Projeto -->
+  <!-- Informações -->
   <section class="p-10 max-w-5xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-center text-[#5DADE2]">Nossa Missão</h3>
-    <p class="text-center text-gray-700 mb-8">Promover educação infantil através de jogos educativos simples, focados em lógica, matemática básica e tomada de decisões, criando um ambiente de aprendizado divertido e acessível a todos.</p>
+    <div class="bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-lg mb-10">
+      <h3 class="text-4xl font-bold text-indigo-700 mb-4 text-center">Nossa Missão</h3>
+      <p class="text-center text-gray-700 leading-relaxed text-lg">
+        Promover a educação infantil e juvenil por meio de histórias interativas e jogos educativos.
+        Unimos lógica, criatividade e diversão para ensinar valores e raciocínio de forma leve e envolvente —
+        sem fins lucrativos, focados totalmente na comunidade.
+      </p>
+    </div>
 
-    <h3 class="text-3xl font-bold mb-6 text-center text-[#5DADE2]">Nosso Time</h3>
-    <ul class="text-center text-gray-700 space-y-2">
-      <li>Guilherme Martins</li>
-      <li>Enzo Bonato</li>
-      
-    </ul>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <h4 class="text-2xl font-bold text-indigo-700 mb-2">Guilherme Martins</h4>
+        <p class="text-gray-600"></p>
+      </div>
+      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
+        <h4 class="text-2xl font-bold text-indigo-700 mb-2">Enzo Bonato</h4>
+        <p class="text-gray-600"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores -->
+  <section class="bg-gradient-to-r from-indigo-100 via-purple-100 to-white py-16">
+    <div class="max-w-5xl mx-auto text-center">
+      <h3 class="text-4xl font-bold text-indigo-700 mb-6">Nossos Valores</h3>
+      <div class="grid md:grid-cols-3 gap-8 mt-8">
+        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-purple-600 mb-2">Educação Acessível</h4>
+          <p class="text-gray-600">Todo conteúdo é gratuito e voltado para o desenvolvimento coletivo.</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-purple-600 mb-2">Criatividade</h4>
+          <p class="text-gray-600">Aprender brincando, com liberdade para imaginar e criar soluções.</p>
+        </div>
+        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-purple-600 mb-2">Colaboração</h4>
+          <p class="text-gray-600">Juntos criamos histórias que ensinam, divertem e inspiram.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#5DADE2] text-white text-center p-4 mt-10">
-    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center p-6 mt-16 shadow-lg">
+    <p class="text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
 </body>
