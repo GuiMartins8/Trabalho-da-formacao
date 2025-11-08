@@ -3,80 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sobre Nós - Histórias Interativas</title>
+  <title>Sobre Nós</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide-icons/dist/umd/lucide.js"></script>
 </head>
-<body class="bg-gradient-to-b from-indigo-50 via-purple-50 to-white text-gray-800 font-sans">
+
+<body class="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 min-h-screen font-[Poppins]">
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-indigo-500 to-purple-600 p-5 flex justify-between items-center shadow-lg backdrop-blur-md">
-    <h1 class="text-white text-3xl font-extrabold tracking-wide">Histórias Interativas ✨</h1>
-    <nav>
-      <ul class="flex gap-6 text-white font-medium">
-        <li><a href="index.html" class="hover:text-yellow-300 transition">Início</a></li>
-        <li><a href="historias.html" class="hover:text-yellow-300 transition">Histórias</a></li>
-        <li><a href="Laboratorio_ideias.html" class="hover:text-yellow-300 transition">Laboratório</a></li>
-      </ul>
-    </nav>
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-[#60A5FA]/20 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl md:text-3xl font-extrabold text-[#60A5FA] tracking-wide">Sobre Nós</h1>
+      <nav>
+        <ul class="flex items-center gap-6 text-gray-200 text-sm md:text-base">
+          <li><a href="index.html" class="hover:text-[#38BDF8] transition">Início</a></li>
+          <li><a href="historias.html" class="hover:text-[#38BDF8] transition">Histórias</a></li>
+          <li><a href="Laboratorio_ideias.html" class="hover:text-[#38BDF8] transition">Laboratório</a></li>
+          <li><a href="login.html" class="hover:text-[#38BDF8] transition flex items-center gap-2">
+              <i data-lucide="log-in" class="w-5 h-5"></i>
+              <span>Login</span>
+              </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <!-- Banner -->
-  <section class="text-center py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white shadow-lg">
-    <h2 class="text-5xl font-extrabold mb-6 drop-shadow-md">Sobre Nós</h2>
-    <p class="text-lg max-w-3xl mx-auto mb-6 opacity-90">
-      Somos um grupo apaixonado por tecnologia e educação, dedicados a criar experiências de aprendizado divertidas, interativas e acessíveis para todos.
+  <!-- Conteúdo -->
+  <main class="pt-32 pb-20 px-6 max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-[#60A5FA] mb-8 drop-shadow-lg">Quem Somos</h2>
+    <p class="text-gray-300 text-lg leading-relaxed mb-10 max-w-3xl mx-auto">
+      Somos um grupo de dois estudantes apaixonados por tecnologia e educação. Nosso projeto tem como objetivo 
+      criar experiências interativas e educativas para crianças, utilizando o poder da tecnologia para tornar o 
+      aprendizado mais envolvente e divertido.
     </p>
-  </section>
 
-  <!-- Informações -->
-  <section class="p-10 max-w-5xl mx-auto">
-    <div class="bg-white/80 backdrop-blur-md p-10 rounded-3xl shadow-lg mb-10">
-      <h3 class="text-4xl font-bold text-indigo-700 mb-4 text-center">Nossa Missão</h3>
-      <p class="text-center text-gray-700 leading-relaxed text-lg">
-        Promover a educação infantil e juvenil por meio de histórias interativas e jogos educativos.
-        Unimos lógica, criatividade e diversão para ensinar valores e raciocínio de forma leve e envolvente —
-        sem fins lucrativos, focados totalmente na comunidade.
-      </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-2xl font-bold text-indigo-700 mb-2">Guilherme Martins</h4>
-        <p class="text-gray-600"></p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+      <div class="bg-[#1E293B]/80 p-6 rounded-2xl border border-[#60A5FA]/30 shadow-lg hover:shadow-[#60A5FA]/30 transition">
+        <h3 class="text-xl font-semibold text-[#93C5FD] mb-3">Missão</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Promover o aprendizado através de histórias e jogos educativos que estimulam o raciocínio, a curiosidade e a imaginação.
+        </p>
       </div>
-      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-2xl font-bold text-indigo-700 mb-2">Enzo Bonato</h4>
-        <p class="text-gray-600"></p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Valores -->
-  <section class="bg-gradient-to-r from-indigo-100 via-purple-100 to-white py-16">
-    <div class="max-w-5xl mx-auto text-center">
-      <h3 class="text-4xl font-bold text-indigo-700 mb-6">Nossos Valores</h3>
-      <div class="grid md:grid-cols-3 gap-8 mt-8">
-        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-purple-600 mb-2">Educação Acessível</h4>
-          <p class="text-gray-600">Todo conteúdo é gratuito e voltado para o desenvolvimento coletivo.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-purple-600 mb-2">Criatividade</h4>
-          <p class="text-gray-600">Aprender brincando, com liberdade para imaginar e criar soluções.</p>
-        </div>
-        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-3xl shadow-lg hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-purple-600 mb-2">Colaboração</h4>
-          <p class="text-gray-600">Juntos criamos histórias que ensinam, divertem e inspiram.</p>
-        </div>
+      <div class="bg-[#1E293B]/80 p-6 rounded-2xl border border-[#60A5FA]/30 shadow-lg hover:shadow-[#60A5FA]/30 transition">
+        <h3 class="text-xl font-semibold text-[#93C5FD] mb-3">Visão</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Ser uma referência em projetos educativos interativos, que inspirem crianças a aprender brincando e pensar de forma criativa.
+        </p>
+      </div>
+
+      <div class="bg-[#1E293B]/80 p-6 rounded-2xl border border-[#60A5FA]/30 shadow-lg hover:shadow-[#60A5FA]/30 transition">
+        <h3 class="text-xl font-semibold text-[#93C5FD] mb-3">Valores</h3>
+        <p class="text-gray-300 text-sm leading-relaxed">
+          Criatividade, inclusão, aprendizado contínuo e o compromisso com uma educação acessível para todos.
+        </p>
       </div>
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center p-6 mt-16 shadow-lg">
-    <p class="text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer class="bg-[#0F172A]/90 text-center py-6 border-t border-[#3B82F6]/20">
+    <p class="text-gray-400 text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
+  <script>
+    lucide.createIcons();
+  </script>
 </body>
 </html>

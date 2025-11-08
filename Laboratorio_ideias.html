@@ -4,131 +4,113 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Laboratório de Ideias</title>
+
+  <!-- Tailwind + Lucide -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-gradient-to-b from-indigo-50 via-purple-50 to-white text-gray-800 font-sans">
+
+<body class="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 font-[Poppins] min-h-screen flex flex-col">
 
   <!-- Header -->
-  <header class="bg-gradient-to-r from-indigo-500 to-purple-600 p-5 flex justify-between items-center shadow-lg backdrop-blur-md">
-    <h1 class="text-white text-3xl font-extrabold tracking-wide">Laboratório de Ideias 💡</h1>
+  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-[#60A5FA]/20 shadow-lg">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="text-2xl md:text-3xl font-extrabold text-[#60A5FA] tracking-wide">Laboratório de Ideias</h1>
+    
     <nav>
-      <ul class="flex gap-6 text-white font-medium">
-        <li><a href="index.html" class="hover:text-yellow-300 transition">Início</a></li>
-        <li><a href="historias.html" class="hover:text-yellow-300 transition">Histórias</a></li>
-        <li><a href="sobre_nos.html" class="hover:text-yellow-300 transition">Sobre</a></li>
+      <ul class="flex items-center gap-6 text-gray-200 text-sm md:text-base">
+        <li><a href="index.html" class="hover:text-[#38BDF8] transition">Início</a></li>
+        <li><a href="historias.html" class="hover:text-[#38BDF8] transition">Histórias</a></li>
+        <li><a href="sobre_nos.html" class="hover:text-[#38BDF8] transition">Sobre</a></li>
+        <li>
+          <a href="login.html" class="hover:text-[#38BDF8] transition flex items-center gap-2">
+            <i data-lucide="log-in" class="w-5 h-5"></i>
+            <span>Login</span>
+          </a>
+        </li>
       </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
   <!-- Banner -->
-  <section class="text-center py-20 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white shadow-lg">
-    <h2 class="text-5xl font-extrabold mb-6 drop-shadow-md">Inove com sua Criatividade</h2>
-    <p class="text-lg max-w-2xl mx-auto mb-8 opacity-90">
-      Ajude a decidir qual será o próximo jogo educativo! Vote, envie ideias e veja o que está em alta.
+  <section class="text-center py-28 mt-20 bg-gradient-to-br from-[#3B82F6]/70 to-[#8B5CF6]/70 text-white backdrop-blur-xl shadow-inner border-y border-[#60A5FA]/20">
+    <h2 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Inove com suas Ideias 💡</h2>
+    <p class="text-lg mb-8 max-w-2xl mx-auto text-gray-100/90">
+      O Laboratório de Ideias é o espaço onde criatividade e aprendizado se encontram.  
+      Compartilhe projetos, inspire colegas e construa o futuro da educação interativa.
     </p>
-    <a href="#votacao" class="bg-white text-purple-700 px-8 py-3 rounded-full font-bold shadow-md hover:scale-105 transition">Participar Agora</a>
+    <a href="#ideias"
+       class="bg-white text-[#3B82F6] font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:bg-[#E0E7FF] transition">
+       Explorar Ideias ↓
+    </a>
   </section>
 
-  <!-- Votação -->
-  <section id="votacao" class="py-16 px-6 max-w-6xl mx-auto">
-    <h3 class="text-4xl font-bold mb-10 text-center text-indigo-700">Vote no Próximo Tema</h3>
+  <!-- Ideias -->
+  <section id="ideias" class="py-20 px-6 max-w-6xl mx-auto">
+    <h3 class="text-4xl font-extrabold text-center mb-12 text-[#60A5FA] drop-shadow-lg">Projetos em Destaque</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-    <div id="cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-10">
-      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-2xl font-bold text-indigo-700 mb-3">Aventura Matemática</h4>
-        <p class="text-gray-600 mb-5">Resolva desafios e enigmas numéricos para vencer em equipe!</p>
-        <button onclick="votar('Aventura Matemática')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
+      <!-- Card -->
+      <div class="bg-[#1E293B]/60 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 
+                  hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
+        <img src="fotos/experimento1.jpg" alt="Robô Educacional"
+             class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">Robô Educacional</h4>
+        <p class="text-gray-300 mb-4">Projeto que ensina conceitos de lógica e programação através de um robô interativo feito com sucata.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white 
+                        px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">
+          Ver Projeto
+        </a>
       </div>
 
-      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-2xl font-bold text-indigo-700 mb-3">O Enigma das Cores</h4>
-        <p class="text-gray-600 mb-5">Descubra padrões e lógica num mundo repleto de mistério e cores!</p>
-        <button onclick="votar('O Enigma das Cores')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
+      <!-- Card -->
+      <div class="bg-[#1E293B]/60 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 
+                  hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
+        <img src="fotos/experimento2.jpg" alt="Laboratório Virtual"
+             class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">Laboratório Virtual</h4>
+        <p class="text-gray-300 mb-4">Simulador online que permite aos alunos realizar experimentos científicos de forma segura e gamificada.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white 
+                        px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">
+          Ver Projeto
+        </a>
       </div>
 
-      <div class="bg-white/80 backdrop-blur-md p-8 rounded-3xl shadow-lg text-center hover:scale-105 transition">
-        <h4 class="text-2xl font-bold text-indigo-700 mb-3">Missão do Sistema Solar</h4>
-        <p class="text-gray-600 mb-5">Explore o cosmos e use a lógica para salvar o universo!</p>
-        <button onclick="votar('Missão do Sistema Solar')" class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-5 py-2 rounded-full hover:opacity-90 transition">Votar</button>
+      <!-- Card -->
+      <div class="bg-[#1E293B]/60 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 
+                  hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
+        <img src="fotos/experimento3.jpg" alt="Jogo das Palavras"
+             class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
+        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">Jogo das Palavras</h4>
+        <p class="text-gray-300 mb-4">Um jogo educacional para ampliar o vocabulário e o raciocínio linguístico de crianças de forma divertida.</p>
+        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white 
+                        px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">
+          Ver Projeto
+        </a>
       </div>
+
     </div>
-
-    <p id="mensagem-voto" class="text-center mt-8 text-green-600 font-semibold"></p>
   </section>
 
-  <!-- Envio de Ideias -->
-  <section class="bg-gradient-to-r from-indigo-100 via-purple-100 to-white py-16">
-    <div class="max-w-3xl mx-auto text-center">
-      <h3 class="text-4xl font-bold mb-6 text-indigo-700">Envie Sua Ideia</h3>
-      <p class="text-gray-700 mb-8">Tem uma sugestão brilhante? Compartilhe com a comunidade!</p>
-
-      <form id="form-ideia" class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl shadow-lg">
-        <input id="nome" type="text" placeholder="Seu nome" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
-        <input id="titulo" type="text" placeholder="Título da ideia" class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
-        <textarea id="descricao" placeholder="Descreva sua ideia..." class="w-full border border-gray-300 p-3 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="5" required></textarea>
-        <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition">Enviar Ideia</button>
-      </form>
-      <p id="mensagem-envio" class="text-center mt-4 text-green-600 font-semibold"></p>
-    </div>
-  </section>
-
-  <!-- Dashboard -->
-  <section class="p-10 max-w-6xl mx-auto">
-    <h3 class="text-4xl font-bold mb-4 text-center text-indigo-700">Tendências Educacionais</h3>
-    <p class="text-center text-gray-600 mb-8">Veja quais temas estão empolgando nossos criadores!</p>
-
-    <div class="bg-white/90 p-8 rounded-3xl shadow-lg backdrop-blur-md">
-      <canvas id="graficoVotos" height="100"></canvas>
-    </div>
+  <!-- Chamada Final -->
+  <section class="text-center py-20 bg-gradient-to-r from-[#1E3A8A]/40 to-[#3B82F6]/30 backdrop-blur-xl border-t border-[#60A5FA]/20">
+    <h3 class="text-3xl font-extrabold mb-4 text-[#93C5FD]">Tem uma ideia incrível?</h3>
+    <p class="text-gray-300 mb-8">Compartilhe com o Laboratório e ajude a transformar a educação!</p>
+    <a href="enviar_ideia.html"
+       class="bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition">
+       Enviar Minha Ideia
+    </a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-center p-6 mt-16 shadow-lg">
-    <p class="text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer class="bg-[#0F172A] text-center py-6 border-t border-[#60A5FA]/20 mt-auto">
+    <p class="text-gray-400 text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
   <script>
-    const votos = {
-      'Aventura Matemática': 0,
-      'O Enigma das Cores': 0,
-      'Missão do Sistema Solar': 0
-    };
-
-    const ctx = document.getElementById('graficoVotos');
-    const grafico = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: Object.keys(votos),
-        datasets: [{
-          label: 'Votos',
-          data: Object.values(votos),
-          backgroundColor: ['#6366F1', '#8B5CF6', '#60A5FA']
-        }]
-      },
-      options: {
-        scales: {
-          y: { beginAtZero: true }
-        }
-      }
-    });
-
-    function votar(tema) {
-      votos[tema]++;
-      grafico.data.datasets[0].data = Object.values(votos);
-      grafico.update();
-      document.getElementById('mensagem-voto').textContent = `✅ Voto registrado em "${tema}"!`;
-    }
-
-    document.getElementById('form-ideia').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const nome = document.getElementById('nome').value;
-      const titulo = document.getElementById('titulo').value;
-      document.getElementById('mensagem-envio').textContent = `Obrigado, ${nome}! Sua ideia "${titulo}" foi enviada com sucesso.`;
-      e.target.reset();
-    });
+    lucide.createIcons();
   </script>
-
 </body>
 </html>
