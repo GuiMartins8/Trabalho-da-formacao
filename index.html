@@ -3,70 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Inicial</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Início | Histórias Interativas</title>
+  <link rel="stylesheet" href="assets/css/global.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+<body>
 
-<body class="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-gray-100 min-h-screen flex flex-col">
-
-  <!-- Header -->
-  <header class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md border-b border-[#60A5FA]/20 shadow-lg">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl md:text-3xl font-extrabold text-[#60A5FA] tracking-wide">Histórias Interativas</h1>
+  <header>
+    <div class="header-container">
+      <h1 class="header-title">Histórias Interativas</h1>
       <nav>
-        <ul class="flex gap-6 text-gray-200 text-sm md:text-base">
-          <li><a href="historias.html" class="hover:text-[#38BDF8] transition">Histórias</a></li>
-          <li><a href="Laboratorio_ideias.html" class="hover:text-[#38BDF8] transition">Laboratório</a></li>
-          <li><a href="sobre_nos.html" class="hover:text-[#38BDF8] transition">Sobre</a></li>
+        <ul class="nav-menu">
+          <li><a href="Laboratorio_ideias.html">Laboratório</a></li>
+          <li><a href="historias.html">Histórias</a></li>
+          <li><a href="sobre_nos.html">Sobre</a></li>
+          <li><a href="login.html">login</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Banner -->
-  <section class="flex flex-col justify-center items-center text-center py-32 px-6 mt-16 bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] shadow-inner">
-    <h2 class="text-5xl font-extrabold mb-4 text-white drop-shadow-lg">Aprenda Lógica Brincando!</h2>
-    <p class="text-lg text-gray-200 mb-8 max-w-2xl">Escolha sua aventura e descubra como suas decisões moldam o destino das histórias.</p>
-    <a href="#historias" class="bg-white text-[#3B82F6] font-bold px-8 py-3 rounded-full shadow-lg hover:scale-105 hover:bg-[#E0E7FF] transition">Começar uma Aventura</a>
-  </section>
+  <main>
+    <section class="hero">
+      <h2 class="hero-title">Explore um Mundo de Aprendizado</h2>
+      <p class="hero-text">Descubra histórias, desafios e aventuras que ensinam de forma divertida.</p>
+      <a href="historias.html" class="btn">Começar Agora</a>
+    </section>
+  </main>
 
-  <!-- Histórias em Destaque -->
-  <section id="historias" class="py-20 px-6 max-w-6xl mx-auto">
-    <h3 class="text-4xl font-extrabold mb-12 text-center text-[#60A5FA]">Histórias em Destaque</h3>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-
-      <!-- Card -->
-      <div class="bg-[#1E293B]/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
-        <img src="fotos/castelo.webp" alt="História 1" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
-        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">Aventura no Castelo</h4>
-        <p class="text-gray-300 mb-4">Ajude a princesa a resolver enigmas para escapar da torre.</p>
-        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-[#1E293B]/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
-        <img src="fotos/floresta.jpg" alt="História 2" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
-        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">O Mistério da Floresta</h4>
-        <p class="text-gray-300 mb-4">Faça escolhas para ajudar o explorador a encontrar o caminho certo.</p>
-        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
-      </div>
-
-      <!-- Card -->
-      <div class="bg-[#1E293B]/80 backdrop-blur-md p-6 rounded-2xl shadow-2xl border border-[#60A5FA]/20 hover:border-[#60A5FA]/40 hover:shadow-[#60A5FA]/30 hover:-translate-y-2 transition duration-300">
-        <img src="fotos/espaço.jpg" alt="História 3" class="rounded-xl mb-4 w-full h-48 object-cover shadow-md">
-        <h4 class="text-2xl font-bold mb-2 text-[#93C5FD]">A Jornada Espacial</h4>
-        <p class="text-gray-300 mb-4">Resolva desafios e salve a nave perdida em uma missão intergaláctica.</p>
-        <a href="#" class="inline-block bg-gradient-to-r from-[#3B82F6] to-[#8B5CF6] text-white px-5 py-2 rounded-full font-bold hover:scale-105 hover:shadow-lg transition">Jogar</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[#0F172A] text-center py-6 border-t border-[#60A5FA]/20 mt-auto">
-    <p class="text-gray-400 text-sm">© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  <footer>
+    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
   </footer>
 
 </body>
