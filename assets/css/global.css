@@ -306,64 +306,95 @@ main {
   margin-top: 0.8rem;
   font-weight: 700;
 }
-
 /* ============================================================
-   9. PÁGINA HISTÓRIAS INTERATIVAS
+   9. PÁGINA HISTÓRIAS INTERATIVAS — NOVO LAYOUT (Game Left + Lista Right)
    ============================================================ */
-.historias-banner {
-  text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(135deg, var(--btn-gradient-start), var(--btn-gradient-end));
-  color: #fff;
-  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-}
 
-.historias-title {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-.historias-subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-  margin-bottom: 2rem;
-}
+/* Banner permanece igual */
 
 .historias-section {
-  max-width: 1200px;
-  margin: 4rem auto;
-  text-align: center;
+  max-width: 1400px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
 }
 
-.historias-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2.5rem;
-}
-
-.historias-card {
+/* ==========================================
+   ÁREA ESQUERDA → Tela do Jogo
+   ========================================== */
+.jogo-area {
+  flex: 2;
   background: var(--bg-secondary);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-  border-radius: var(--radius);
+  border: 1px solid rgba(59, 130, 246, 0.25);
   padding: 1.5rem;
-  transition: var(--transition);
+  border-radius: var(--radius);
+  height: 70vh;
+  overflow-y: auto;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-.historias-card:hover {
-  border-color: var(--text-accent);
-  box-shadow: 0 0 25px rgba(96, 165, 250, 0.4);
-}
-.historias-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+
+.jogo-area h3 {
+  color: var(--text-accent);
   margin-bottom: 1rem;
 }
-.historias-card h4 {
+
+.game-box {
+  width: 100%;
+  height: 55vh;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 1.2rem;
+  color: var(--text-main);
+  opacity: 0.8;
+}
+
+
+/* ==========================================
+   ÁREA DIREITA → Lista de Jogos
+   ========================================== */
+.lista-jogos {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lista-jogos h3 {
   color: var(--text-accent);
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.jogo-btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(to right, var(--btn-gradient-start), var(--btn-gradient-end));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jogo-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
 }
 
 /* ============================================================
@@ -376,4 +407,54 @@ footer {
   padding: 1.5rem 1rem;
   color: var(--text-muted);
   font-size: 0.9rem;
+}
+/* ============================================================
+   HISTÓRIAS NA PÁGINA INICIAL — AJUSTES DE LAYOUT
+   ============================================================ */
+
+.home-historias-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-historias-section .hero-title {
+  font-size: 2.5rem;
+  color: var(--text-accent);
+  margin-bottom: 3rem;
+}
+
+.home-historias-section .historias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.home-historias-section .historias-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.home-historias-section .historias-card:hover {
+  border-color: var(--text-accent);
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.4);
+}
+
+.home-historias-section .historias-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.home-historias-section .historias-card h4 {
+  color: var(--text-accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
 }

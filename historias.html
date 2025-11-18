@@ -23,39 +23,28 @@
     </div>
   </header>
 
-  <section class="historias-banner">
-    <h2 class="historias-title">Entre em um Novo Mundo</h2>
-    <p class="historias-subtitle">Escolha seu destino, resolva desafios e viva aventuras únicas.</p>
-    <a href="#historias" class="btn">Explorar Histórias ↓</a>
+  <main id="historias" class="historias-section">
+
+  <!-- LADO ESQUERDO: TELA DO JOGO -->
+  <section class="jogo-area">
+    <h3>Selecione um jogo</h3>
+    <div id="gameContainer" class="game-box">
+      Escolha um jogo ao lado para começar.
+    </div>
   </section>
 
-  <main id="historias" class="historias-section">
-    <h3 class="hero-title">Histórias em Destaque</h3>
-    <div class="historias-grid">
-      
-      <div class="historias-card">
-        <img src="assets/fotos/castelo.webp" alt="Aventura no Castelo">
-        <h4>Aventura no Castelo</h4>
-        <p>Ajude a princesa a escapar da torre resolvendo enigmas misteriosos.</p>
-        <a href="#" class="btn">Jogar</a>
-      </div>
+  <!-- LADO DIREITO: LISTA DE JOGOS -->
+  <aside class="lista-jogos">
+    <h3>Jogos Disponíveis</h3>
 
-      <div class="historias-card">
-        <img src="assets/fotos/floresta.jpg" alt="O Mistério da Floresta">
-        <h4>O Mistério da Floresta</h4>
-        <p>Acompanhe o explorador em sua jornada por um bosque cheio de segredos.</p>
-        <a href="#" class="btn">Jogar</a>
-      </div>
+    <button class="jogo-btn" onclick="carregarJogo('castelo')">Aventura no Castelo</button>
+    <button class="jogo-btn" onclick="carregarJogo('floresta')">O Mistério da Floresta</button>
+    <button class="jogo-btn" onclick="carregarJogo('espaco')">A Jornada Espacial</button>
 
-      <div class="historias-card">
-        <img src="assets/fotos/espaço.jpg" alt="A Jornada Espacial">
-        <h4>A Jornada Espacial</h4>
-        <p>Embarque em uma missão intergaláctica e salve a nave perdida no cosmos.</p>
-        <a href="#" class="btn">Jogar</a>
-      </div>
+  </aside>
 
-    </div>
-  </main>
+</main>
+
 
   <footer>
     <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
