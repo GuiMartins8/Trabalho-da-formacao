@@ -1,0 +1,78 @@
+/* ================================
+   ESTILO DO JOGO: FLORESTA
+   ================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* Container principal */
+#gameContainer {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#gameContainer {
+  padding: 20px;
+  box-sizing: border-box;
+  /* background: linear-gradient(#b4e0a5, #89c37c); */
+  font-family: 'Patrick Hand', sans-serif;
+  color: #234016;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.25);
+  overflow-y: auto;
+}
+
+/* Texto da cena */
+.cena-texto {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: white;
+  text-shadow: 1px 1px 0px black;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 10px;
+}
+
+/* Área dos botões — vertical, sempre abaixo */
+.opcoes-jogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Botões */
+.btn-escolha {
+  background: #3b6e2b;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.25s;
+  box-shadow: 0 4px 0 #2a4f1f;
+  font-family: 'Patrick Hand', sans-serif;
+}
+
+.btn-escolha:hover {
+  background: #4f8b3a;
+  transform: scale(1.05);
+}
+
+.btn-escolha:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 0 #2a4f1f;
+}
+
+/* Imagem opcional */
+.cena-img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  border: 3px solid #2d4c1e;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}

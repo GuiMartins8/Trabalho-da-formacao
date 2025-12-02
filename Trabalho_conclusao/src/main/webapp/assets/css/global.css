@@ -1,0 +1,460 @@
+/* ============================================================
+   GLOBAL.CSS — Versão Otimizada e Modular
+   ============================================================ */
+
+/* ============================================================
+   1. VARIÁVEIS GLOBAIS
+   ============================================================ */
+:root {
+  --bg-main: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-main: #e2e8f0;
+  --text-accent: #60a5fa;
+  --text-muted: #94a3b8;
+  --border-accent: #3b82f6;
+  --btn-gradient-start: #3b82f6;
+  --btn-gradient-end: #8b5cf6;
+  --success: #10b981;
+  --error: #f87171;
+  --radius: 1.5rem;
+  --transition: 0.3s ease;
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* ============================================================
+   2. RESETAÇÃO E BASE
+   ============================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  color: var(--text-main);
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: var(--radius);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================================================
+   3. ELEMENTOS DE LAYOUT GERAIS
+   ============================================================ */
+header {
+  background: rgba(30, 64, 175, 0.6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 1.25rem;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-accent);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu a:hover {
+  color: #38bdf8;
+}
+
+main {
+  padding: 3rem 1rem;
+}
+
+/* ============================================================
+   4. COMPONENTES REUTILIZÁVEIS
+   ============================================================ */
+
+/* Botões */
+.btn {
+  display: inline-block;
+  background: linear-gradient(to right, var(--btn-gradient-start), var(--btn-gradient-end));
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.btn-light {
+  background: #fff;
+  color: var(--btn-gradient-start);
+}
+.btn-light:hover {
+  background: #e0e7ff;
+}
+
+/* Cards genéricos */
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+.card:hover {
+  border-color: var(--text-accent);
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.4);
+}
+
+/* Grid de cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+/* ============================================================
+   5. FORMULÁRIOS (LOGIN / REGISTRO)
+   ============================================================ */
+.form-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: rgba(30, 41, 59, 0.9);
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.2);
+}
+
+.form-title {
+  text-align: center;
+  color: var(--text-accent);
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 0.7rem;
+  border-radius: 0.8rem;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(15, 23, 42, 0.7);
+  color: var(--text-main);
+  outline: none;
+}
+.input-group input:focus {
+  border-color: var(--text-accent);
+}
+
+.form-error {
+  color: var(--error);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* ================================
+   FORM: LINKS E INTERAÇÕES
+================================ */
+.form-btn {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form-link-text {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.form-link {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   6. PÁGINA INICIAL (INDEX)
+   ============================================================ */
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, var(--btn-gradient-start), var(--btn-gradient-end));
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* ============================================================
+   7. PÁGINA LABORATÓRIO DE IDEIAS
+   ============================================================ */
+.lab-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.lab-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  color: var(--text-main);
+}
+.lab-card h3 {
+  color: var(--text-accent);
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================================
+   8. PÁGINA SOBRE NÓS
+   ============================================================ */
+.sobre-container {
+  max-width: 900px;
+  margin: 4rem auto;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.sobre-title {
+  color: var(--text-accent);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+.sobre-text {
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.sobre-equipe {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sobre-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  width: 250px;
+  transition: var(--transition);
+}
+.sobre-card:hover {
+  border-color: var(--text-accent);
+  box-shadow: 0 0 20px rgba(96, 165, 250, 0.4);
+}
+.sobre-card h4 {
+  color: var(--text-accent);
+  margin-top: 0.8rem;
+  font-weight: 700;
+}
+/* ============================================================
+   9. PÁGINA HISTÓRIAS INTERATIVAS — NOVO LAYOUT (Game Left + Lista Right)
+   ============================================================ */
+
+/* Banner permanece igual */
+
+.historias-section {
+  max-width: 1400px;
+  margin: 3rem auto;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* ==========================================
+   ÁREA ESQUERDA → Tela do Jogo
+   ========================================== */
+.jogo-area {
+  flex: 2;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.jogo-area h3 {
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+
+.game-box {
+  width: 100%;
+  height: 55vh;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(59,130,246,0.2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-y: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 1.2rem;
+  color: var(--text-main);
+  opacity: 0.8;
+}
+
+
+/* ==========================================
+   ÁREA DIREITA → Lista de Jogos
+   ========================================== */
+.lista-jogos {
+  flex: 1;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  height: 70vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.lista-jogos h3 {
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+
+.jogo-btn {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  background: linear-gradient(to right, var(--btn-gradient-start), var(--btn-gradient-end));
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jogo-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
+/* ============================================================
+   10. RODAPÉ GLOBAL
+   ============================================================ */
+footer {
+  background: var(--bg-main);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+/* ============================================================
+   HISTÓRIAS NA PÁGINA INICIAL — AJUSTES DE LAYOUT
+   ============================================================ */
+
+.home-historias-section {
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.home-historias-section .hero-title {
+  font-size: 2.5rem;
+  color: var(--text-accent);
+  margin-bottom: 3rem;
+}
+
+.home-historias-section .historias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.home-historias-section .historias-card {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+}
+
+.home-historias-section .historias-card:hover {
+  border-color: var(--text-accent);
+  box-shadow: 0 0 25px rgba(96, 165, 250, 0.4);
+}
+
+.home-historias-section .historias-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.home-historias-section .historias-card h4 {
+  color: var(--text-accent);
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratório</title>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1 class="header-title">Laboratório de Ideias</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="historias.html">Histórias</a></li>
+          <li><a href="sobre_nos.html">Sobre</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+ <main class="lab-container">
+  <h2 class="hero-title">Crie, Compartilhe e Inspire</h2>
+
+  <div class="cards-grid">
+    <div class="lab-card" data-idea="ideia1">
+      <h3>Ideia 1</h3>
+      <p>Desenvolva uma história sobre descobertas científicas.</p>
+      <button class="btn">Votar</button>
+    </div>
+
+    <div class="lab-card" data-idea="ideia2">
+      <h3>Ideia 2</h3>
+      <p>Monte um enredo voltado à sustentabilidade e ao meio ambiente.</p>
+      <button class="btn">Votar</button>
+    </div>
+
+    <div class="lab-card" data-idea="ideia3">
+      <h3>Ideia 3</h3>
+      <p>Crie uma jornada de aprendizado que envolva desafios matemáticos.</p>
+      <button class="btn">Votar</button>
+    </div>
+  </div>
+
+  <!-- Formulário para receber ideias -->
+  <section class="form-section">
+    <h2>Envie-nos a sua ideia</h2>
+
+    <form id="form-ideias">
+      <div class="input-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="input-group">
+        <label for="descricao">Descreva sua ideia</label>
+        <textarea id="descricao" rows="6" required></textarea>
+      </div>
+
+      <button type="submit" class="enviar-btn">Enviar</button>
+    </form>
+  </section>
+</main>
+
+
+  <footer>
+    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  </footer>
+<script src="assets/js/laboratorio.js"></script>
+</body>
+</html>

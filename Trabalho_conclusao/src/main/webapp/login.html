@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="assets/css/global.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1 class="header-title">Entrar</h1>
+    <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Laboratorio_ideias.html">Laboratório</a></li>
+          <li><a href="historias.html">Histórias</a></li>
+          <li><a href="sobre_nos.html">Sobre</a></li>
+        </ul>
+      </nav>
+  </div>
+</header>
+
+<main>
+  <form id="loginForm" class="form-container">
+    <h2 class="form-title">Acesse sua Conta</h2>
+
+    <div class="input-group">
+      <label for="loginEmail">E-mail</label>
+      <input type="email" id="loginEmail" placeholder="Digite seu e-mail" required>
+    </div>
+
+    <div class="input-group">
+      <label for="loginPassword">Senha</label>
+      <input type="password" id="loginPassword" placeholder="Digite sua senha" required>
+    </div>
+
+    <button type="submit" class="btn form-btn">Entrar</button>
+
+    <!-- Área para feedback do JavaScript -->
+    <p id="loginMessage" class="form-message" role="status" aria-live="polite"></p>
+
+    <p class="form-link-text">
+      Não tem conta?
+      <a href="registro.html" class="form-link">Cadastre-se</a>
+    </p>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+</footer>
+
+<script src="assets/js/login.js"></script>
+</body>
+</html>

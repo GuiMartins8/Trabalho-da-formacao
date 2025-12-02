@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Histórias Interativas</title>
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <h1 class="header-title">Histórias Interativas</h1>
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="Laboratorio_ideias.html">Laboratório</a></li>
+          <li><a href="sobre_nos.html">Sobre</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="historias" class="historias-section">
+
+  <!-- LADO ESQUERDO: TELA DO JOGO -->
+  <section class="jogo-area">
+    <h3>Selecione um jogo</h3>
+    <div id="gameContainer" class="game-box">
+      Escolha um jogo ao lado para começar.
+    </div>
+  </section>
+
+  <!-- LADO DIREITO: LISTA DE JOGOS -->
+  <aside class="lista-jogos">
+    <h3>Jogos Disponíveis</h3>
+
+    <button class="jogo-btn" onclick="carregarJogo('castelo')">Aventura no Castelo</button>
+    <button class="jogo-btn" onclick="carregarJogo('floresta')">O Mistério da Floresta</button>
+    <button class="jogo-btn" onclick="carregarJogo('espaco')">A Jornada Espacial</button>
+
+  </aside>
+
+</main>
+
+
+  <footer>
+    <p>© 2025 Cooperativa Educacional - Todos os direitos reservados.</p>
+  </footer>
+  <script src="assets/js/historias.js"></script>
+</body>
+</html>
