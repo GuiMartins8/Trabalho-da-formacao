@@ -19,19 +19,35 @@ document.getElementById('loginForm').addEventListener('submit', function (e) {
 
   const users = getUsers();
 
-  // Procura usuário exato por e-mail e senha
+  // encontra usuário por e-mail e senha
   const found = users.find(u => u.email === email && u.senha === senha);
 
   if (found) {
     msg.style.color = 'green';
     msg.textContent = 'Login bem-sucedido! Redirecionando...';
 
-    // Marca sessão simples no localStorage
-    localStorage.setItem('usuarioLogado', JSON.stringify({ email: found.email, loggedAt: Date.now() }));
+    // garante que o objeto de sessão tenha id, nome, email, senha
+    const sessionUser = {
+      id: found.id || Date.now(),
+      nome: found.nome || (found.email ? found.email.split('@')[0] : 'Usuário'),
+      email: found.email,
+      senha: found.senha
+    };
 
-    // Redireciona após breve delay (para o usuário ver a mensagem)
+    // se o usuário original não tinha id/nome, atualiza no array e salva
+    if (!found.id || !found.nome) {
+      const idx = users.findIndex(u => u.email === found.email && u.senha === found.senha);
+      if (idx !== -1) {
+        users[idx] = { ...users[idx], ...sessionUser };
+        localStorage.setItem('usuarios', JSON.stringify(users));
+      }
+    }
+
+    localStorage.setItem('usuarioLogado', JSON.stringify(sessionUser));
+
+    // Redireciona após breve delay
     setTimeout(() => {
-      window.location.href = 'index.html';
+      window.location.href = 'usuario.html';
     }, 700);
   } else {
     msg.style.color = 'crimson';
