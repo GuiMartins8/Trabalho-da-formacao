@@ -15,41 +15,43 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// Tratamento do submit do formulário de registro
 document.getElementById('registerForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
+  const nome = document.getElementById('regNome').value.trim();
   const email = document.getElementById('regEmail').value.trim().toLowerCase();
   const senha = document.getElementById('regPassword').value;
-
   const msg = document.getElementById('registerMessage');
 
-  // Validações básicas
+  // Validação do nome
+  if (nome.length < 2) {
+    msg.style.color = 'crimson';
+    msg.textContent = 'Digite um nome válido.';
+    return;
+  }
+
+  // Validação do e-mail
   if (!isValidEmail(email)) {
     msg.style.color = 'crimson';
     msg.textContent = 'Informe um e-mail válido.';
     return;
   }
-  
-    const regras = [
-      { teste: senha.length >= 6, msg: 'A senha precisa ter pelo menos 6 caracteres.' },
-      { teste: /[A-Z]/.test(senha), msg: 'A senha deve conter pelo menos uma letra maiúscula.' },
-      { teste: /[0-9]/.test(senha), msg: 'A senha deve conter pelo menos um número.' },
-      { teste: /[!@#$%^&*(),.?":{}|<>_\-+=/\\]/.test(senha), msg: 'A senha deve conter pelo menos um caractere especial.' }
-    ];
 
-    for (const regra of regras) {
-      if (!regra.teste) {
-        msg.style.color = 'crimson';
-        msg.textContent = regra.msg;
-        return;
-      }
+  // Validação da senha
+  const regras = [
+    { teste: senha.length >= 6, msg: 'A senha precisa ter pelo menos 6 caracteres.' },
+    { teste: /[A-Z]/.test(senha), msg: 'A senha deve conter pelo menos uma letra maiúscula.' },
+    { teste: /[0-9]/.test(senha), msg: 'A senha deve conter pelo menos um número.' },
+    { teste: /[!@#$%^&*(),.?":{}|<>_\-+=/\\]/.test(senha), msg: 'A senha deve conter pelo menos um caractere especial.' }
+  ];
+
+  for (const regra of regras) {
+    if (!regra.teste) {
+      msg.style.color = 'crimson';
+      msg.textContent = regra.msg;
+      return;
     }
-
-    msg.style.color = 'green';
-    msg.textContent = 'Senha válida!';
-
-
+  }
 
   const users = getUsers();
 
@@ -61,12 +63,22 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     return;
   }
 
-  // Adiciona novo usuário (ATENÇÃO: senha está em texto claro — ok só para protótipo)
-  users.push({ email, senha });
+  // Criação do usuário completo
+  const newUser = {
+    id: Date.now(),
+    nome,
+    email,
+    senha
+  };
+
+  users.push(newUser);
   saveUsers(users);
 
   msg.style.color = 'green';
   msg.textContent = 'Cadastro realizado com sucesso! Você pode entrar agora.';
-  // limpa form
+
+    setTimeout(() => {
+      window.location.href = 'login.html';
+    }, 700);
   e.target.reset();
 });

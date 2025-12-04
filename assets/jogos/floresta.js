@@ -23,7 +23,7 @@ window.iniciarJogoFloresta = function () {
 
     container.innerHTML = "";
     cenaIntroducao();
-};
+}
 
 // Renderizador de cenas
 function mostrarCena(texto, opcoes, imagem = null) {
